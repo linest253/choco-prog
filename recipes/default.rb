@@ -14,42 +14,11 @@ chocolatey_package 'gow' do
     action :upgrade
 end
 
-chocolatey_package 'python' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'pycharm-community' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'pip' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'ruby' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'eclipse' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'visualstudio2015community' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'git' do
-    action :upgrade
-    ignore_failure true
-end
-
-chocolatey_package 'github' do
-    action :upgrade
-    ignore_failure true
+package_array = ['python', 'pycharm-community', 'pip', 'ruby', 'eclipse', 'visualstudio2017community', 'git', 'github']
+ 
+package_array.each do |this_package|
+    chocolatey_package this_package do
+        action :upgrade
+        ignore_failure true
+    end
 end
