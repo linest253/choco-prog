@@ -14,7 +14,7 @@ chocolatey_package 'gow' do
     action :upgrade
 end
 
-package_array = ['python', 'pycharm-community', 'pip', 'ruby', 'eclipse', 'visualstudio2017community', 'git', 'github', 'vim', 'visualstudiocode', 'poshgit', 'packer', 'docker-for-windows', 'docker-compose', 'minikube', 'minishift', 'vscode-docker', 'atom', 'sublimetext3', 'jivkok.sublimetext3.packages']
+package_array = ['python', 'pycharm-community', 'pip', 'ruby', 'eclipse', 'visualstudio2017community', 'git', 'github', 'sourcetree', 'git-credential-manager-for-windows', 'vim', 'visualstudiocode', 'poshgit', 'packer', 'docker-for-windows', 'docker-compose', 'minikube', 'minishift', 'vscode-docker', 'atom', 'sublimetext3', 'jivkok.sublimetext3.packages']
  
 package_array.each do |this_package|
     chocolatey_package this_package do
